@@ -1,15 +1,16 @@
 import React from "react";
-import PokemonCard from "./PokemonCard";
 import { Card } from "semantic-ui-react";
 
-function PokemonCollection({pokemonIndex}) {
-  const pokemonArray = pokemonIndex.map((pokemon)=> <PokemonCard {...pokemon}/>);
-  
-  console.log('what it do', pokemonIndex);
+function PokemonCollection({pokemonIndex, onSubmit, newPokemonCard}) {
+// console.log('NEWPOKEMONBaBY', newPokemonCard);
   
   return (
     <Card.Group itemsPerRow={6}>
-      {pokemonArray}
+      if(newPokemonCard === true){
+        {newPokemonCard}
+      } else {
+      {pokemonIndex}
+}
     </Card.Group>
   );
 }

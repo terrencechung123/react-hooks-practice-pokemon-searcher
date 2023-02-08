@@ -3,14 +3,13 @@ import { Card } from "semantic-ui-react";
 
 function PokemonCard({sprites, name, hp, id}) {
   const [pokemonImage, setPokemonImage] = useState(true);
-  console.log('hellooooooo',{sprites});
 
   function handlePokeClick(){
     //i want the picture to switch to the back of the card when i click
       setPokemonImage((currentPic) => !currentPic)
-      const pokemonNewImage = pokemonImage ? <img src={sprites.front} alt="oh no!" /> : <img src={sprites.back} alt="oh no!" />
-  }
-
+    }
+    const pokemonNewImage = pokemonImage ? <img src={sprites.front} alt="oh no!" /> : <img src={sprites.back} alt="oh no!" />
+    
   return (
     <Card>
       <div>

@@ -19,7 +19,7 @@ function App() {
   
   
   
-  console.log('hello', {pokemonIndex});
+  console.log('pokemonIndex', {pokemonIndex});
 
 
 
